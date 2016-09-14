@@ -1,0 +1,514 @@
+/* Overall */
+body {
+	color: #666;
+	font-size: 16px;
+	font-family: 'Muli', Arial, Helvetica, sans-serif;
+	/*font-family: Arial, Helvetica, sans-serif;*/
+}
+section {
+	background: 50% 0 no-repeat fixed;
+	background-size: cover;
+	padding: 300px 0;
+	/*border-right: solid 1px red;*/
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #58595B;
+	font-weight: 700;
+	font-family: 'Oxygen', Arial, Helvetica, sans-serif;
+	/*font-family: Helvetica, Arial, sans-serif;*/
+}
+h1 {/*main title*/
+	font-size: 530%;
+	line-height: 130%;
+	margin-bottom: 200px;
+}
+h2 {/*chapter title*/
+	font-size: 350%;
+	line-height: 140%;
+	margin-bottom: 100px;
+}
+h3 {/*bullet points*/
+	font-size: 200%;
+	line-height: 110%;
+	margin-bottom: 20px;
+}
+h4 {/*Misc.*/
+	font-size: 160%;
+	line-height: 110%;
+	margin-bottom: 20px;
+}
+@media (max-width: 600px) {
+	h1 { font-size: 400%; line-height: 120%; }
+	h2 { font-size: 300%; line-height: 110%; }
+}
+@media (max-width: 400px) {
+	h1 { font-size: 300%; }
+	h2 { font-size: 250%; }
+}
+section p {
+	margin-bottom: 20px;
+}
+h3 .bullet {
+	margin: 0 10px 0 -40px;
+}
+p .bullet {
+	width: 12px;
+	height: 12px;
+	margin: 0 5px 0 -17px;
+}
+
+@media (max-width: 991px) {
+	h3 .bullet {
+		margin: 0 10px 0 0;
+	}
+	p .bullet {
+		margin: 0 5px 0 0;
+	}
+}
+
+/* Navigation*/
+.navbar {
+	min-height: 0;
+}
+.navbar-text {
+	margin: 2px 5px;
+}
+@media (max-width: 767px) {
+	.navbar-text span { display: block; }
+	#navTip li:nth-of-type(-n+9) span:before { content: '0'; }
+	#navTip li:nth-of-type(1) span:after { content: '. Preface'; }
+	#navTip li:nth-of-type(2) span:after { content: '. Definition'; }
+	#navTip li:nth-of-type(3) span:after { content: '. Interview'; }
+	#navTip li:nth-of-type(4) span:after { content: '. Three Mode'; }
+	#navTip li:nth-of-type(5) span:after { content: '. The Meetup'; }
+	#navTip li:nth-of-type(6) span:after { content: '. Objective'; }
+	#navTip li:nth-of-type(7) span:after { content: '. Pitch'; }
+	#navTip li:nth-of-type(8) span:after { content: '. Feature - Search'; }
+	#navTip li:nth-of-type(9) span:after { content: '. Feature - Make'; }
+	#navTip li:nth-of-type(10) span:after { content: '. Feature - Journal'; }
+	#navTip li:nth-of-type(11) span:after { content: '. Story of Dave'; }
+	#navTip li:nth-of-type(12) span:after { content: '. Exp. Model'; }
+	#navTip li:nth-of-type(13) span:after { content: '. Value Proposition'; }
+	#navTip li:nth-of-type(14) span:after { content: '. Wrap Up'; }
+}
+.navbar-toggle {
+	margin: 5px 5px;
+}
+.nav > li > a {
+	padding: 2px 5px;
+}
+
+/* Carousels*/
+.carousel-control {
+	color: #666;
+	text-shadow: 0 1px 2px black;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+.carousel-control.left,
+.carousel-control.right {
+	background-image: none;
+	filter: none;
+	font-size: 30px;
+}
+.carousel-control:hover,
+.carousel-control:focus {
+	color: #555;
+}
+.carousel-indicators {
+	bottom: -40px;
+}
+.carousel-indicators li {
+	width: 15px;
+	height: 15px;
+	margin: 0 5px;
+	background-color: #EEE;
+	background-color: rgba(0, 0, 0, 0.2);
+	border: 1px solid #999;
+	border-radius: 15px;
+}
+.carousel-indicators .active {
+	width: 15px;
+	height: 15px;
+	margin: 0 5px;
+	background-color: #666;
+}
+.carousel-caption {
+	padding: 0;
+	bottom: -20px;
+}
+
+/* Carousel fade fix*/
+.carousel .item {
+	-webkit-transition: opacity 0.8s;
+	-moz-transition: opacity 0.8s;
+	-ms-transition: opacity 0.8s;
+	-o-transition: opacity 0.8s;
+	transition: opacity 0.8s;
+}
+.carousel .active.left, .carousel .active.right {
+	left:0;
+	opacity:0;
+	z-index:2;
+}
+.carousel .next, .carousel .prev {
+	left:0;
+	opacity:1;
+	z-index:1;
+}
+
+/* video */
+.vidWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.vidWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 30px;
+}
+@media (min-width: 992px) {/*fix for >= md screens*/
+	.vidWrapper {
+		padding-bottom: 31.6%;
+		/*padding-bottom: 56.25%;*/
+	}
+	.vidWrapper iframe {
+		padding: 0;
+	}
+	#search .vidWrapper,
+	#make .vidWrapper,
+	#journal .vidWrapper {
+		padding-bottom: 45%;
+	}
+}
+
+/* preface */
+#preface {
+	background-image: url(../images/backgroundTitle.jpg);
+}
+
+/* definition */
+#definition {
+	background-image: url(../images/backgroundCharacter.png);
+}
+#definition h3 {
+	margin-top: 50px;
+}
+#definition h3 span {
+	font-weight: 100;
+}
+
+/* interview */
+#interview {
+	background-image: url(../images/backgroundInterview.png);
+	padding: 0;
+}
+#interview .chapter {
+	padding: 250px 0;
+	background-color: transparent;
+}
+#interview .chapter:first-of-type {
+	padding-top: 300px;
+}
+#interview .chapter:nth-of-type(odd) {
+	background-color: #222;
+}
+#interview .chapter:nth-of-type(odd) span,
+#interview .chapter:nth-of-type(odd) h2,
+#interview .chapter:nth-of-type(odd) h4 {
+	color: #CCC;
+}
+#interview .chapter h4 {
+	font-weight: 500;
+	line-height: 40px;
+}
+#interview .col-md-4 {
+	padding: 0 50px;
+}
+
+/* illcontainer */
+.illcontainer {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+@media (min-width: 768px) {
+  .illcontainer { width: 750px; }
+}
+@media (min-width: 992px) {
+  .illcontainer { width: 970px; }
+}
+@media (min-width: 1200px) {
+  .illcontainer { width: 1170px; }
+}
+
+/* three mode */
+#threeMode {
+	background-image: url(../images/backgroundMode.jpg);
+	padding: 900px 0 0 0;
+}
+#threeMode h2 {
+	margin-bottom: 20px;
+}
+#threeMode article {
+	background-color: #FFF;
+	background-color: rgba(256,256,256,0.8);
+	padding: 100px 0 300px 0;
+}
+.anchor {
+	height: 1000px;
+}
+
+/* Animation */
+#animation {
+	position: fixed;
+	width: 100%;
+	top: 100px;
+	left: 0;
+	z-index: 2000;
+}
+#animation h2 {
+	margin-bottom: 20px;
+}
+#animation .col-sm-12 {
+	margin-bottom: 50px;
+}
+.free {
+	position: absolute;	
+}
+
+.build div:first-of-type h3 { color: #F26722; }
+.branch div:first-of-type h3 { color: #4AAC58; }
+.seek div:first-of-type h3 { color: #0098D8; }
+
+.txt.build {
+	margin-top: 42%;
+}
+.txt.branch {
+	margin-top: 35%;
+}
+.txt.recipe {
+	margin-top: 50%;
+	padding-left: 25%;
+	font-size: 150%;
+}
+.graphic {
+	background: no-repeat center top;
+	background-size: contain;
+	padding: 0;
+	text-align: center;
+	font-size: 150%;
+	/*border: solid 1px red;*/
+}
+.graphic.arr_1 {
+	margin-left: -20%;
+	margin-top: 200%;
+}
+.graphic.arr_3 {
+	margin-top: 140%;
+	margin-left: 50%;
+}
+.graphic.arr_2 {
+	margin-top: 80%;
+	margin-left: 50%;
+}
+.graphic.build, .graphic.seek, .graphic.branch {
+	padding-top: 154.54%;
+}
+.graphic.build {
+	background-image: url(../images/graphModeBuilder.png);
+	color: #F26722;
+	margin-top: 90%;
+} 
+.graphic.seek {
+	background-image: url(../images/graphModeSeeker.png);
+	color: #0098D8;
+} 
+.graphic.branch {
+	background-image: url(../images/graphModeBrancher.png);
+	color: #4AAC58;
+	margin-top: 70%;
+}
+.graphic.recipe {
+	background-image: url(../images/graphModeRecipe.png);
+	background-size: 50px 50px;
+	padding-top: 50px;
+}
+.graphic.recipe.exp {
+	width: 200px;
+	margin-top: 35%; 
+	left: 35%;
+}
+.graphic.recipe.share {
+	top: 43%;
+	left: 25%;
+}
+.graphic.fork {
+	top: 20%;
+	left: 25%;
+}
+
+/* meetup */
+#meetup {
+	background-image: url(../images/backgroundInsight.jpg);
+	padding: 0 0 800px 0;
+	font-size: 120%;
+}
+#meetup article {
+	background: rgb(0,0,0);
+	background: rgba(0,0,0,0.5);
+	padding-top: 300px;
+	padding-bottom: 50px;
+}
+#meetup, #meetup h2 {
+	color: #EEE;
+}
+
+/* objective */
+#objective {
+	background-image: url(../images/backgroundInterview.png);
+}
+#objective h2 span {
+	font-weight: normal;
+}
+#objective h2 {
+	padding-right: 20px;
+}
+
+/* pitch */
+#pitch {
+	background-image: url(../images/backgroundService.png);
+}
+#pitch .row {
+	margin-top: 300px;
+}
+#pitch .row .col-md-10 {
+	margin-top: 240px;
+}
+#mascot {
+	margin: 0 0 0 -80px;
+}
+#pitch h3 {
+	line-height: 150%;
+	font-weight: 500;
+}
+#pitch h3 span {
+	color: #00ACD3;
+}
+
+/* Features Page */
+#search, #search h2, #search h3,
+#make, #make h2, #make h3,
+#journal, #journal h2, #journal h3 {
+	color: #EEE;
+}
+#search .container,
+#make .container, 
+#journal .container {
+	width: 100%;
+}
+.macbook {
+	background: url(../images/macbook_word.png) no-repeat right top;
+	height: 61.52%;
+	background-size: cover;
+	padding: 11.5% 3.5% 7% 0;
+}
+@media (max-width: 991px) {/*fix for <= md screens*/
+	.macbook {
+		background: transparent;
+		height: auto;
+		padding: 0;
+	}
+}
+
+/* search */
+#search {
+	background-image: url(../images/backgroundSearch.jpg);
+}
+
+/* make */
+#make {
+	background-image: url(../images/backgroundLab.jpg);
+}
+
+/* journal */
+#journal {
+	background-image: url(../images/backgroundJournal.jpg);
+}
+
+/* dave story */
+#dave {
+	padding-bottom: 0;
+}
+.piece {
+	border-top: solid 2px #EEE;
+	background: 50% 0 no-repeat fixed;
+	background-position: top;
+	background-size: contain;
+	min-height: 1200px;
+	padding: 300px 0;
+}
+.piece h3 span {
+	font-weight: 900;
+	color: #00ACD3;
+}
+.piece:nth-of-type(even) {
+	background-position: right;
+}
+.piece:nth-of-type(odd) {
+	background-position: left;
+}
+.piece:nth-of-type(1) {background-image: url(../images/piece01.jpg);}
+.piece:nth-of-type(2) {background-image: url(../images/piece02.jpg);}
+.piece:nth-of-type(3) {background-image: url(../images/piece03.jpg);}
+.piece:nth-of-type(4) {background-image: url(../images/piece04.jpg);}
+.piece:nth-of-type(5) {background-image: url(../images/piece05.jpg);}
+.piece:nth-of-type(6) {background-image: url(../images/piece06.jpg);}
+.piece:nth-of-type(7) {background-image: url(../images/piece07.jpg);}
+.piece:nth-of-type(8) {background-image: url(../images/piece08.jpg);}
+.piece:nth-of-type(9) {background-image: url(../images/piece09.jpg);}
+.piece:nth-of-type(10) {background-image: url(../images/piece10.jpg);}
+.piece:nth-of-type(11) {background-image: url(../images/piece11.jpg);}
+.piece:nth-of-type(12) {background-image: url(../images/piece12.jpg);}
+.piece:nth-of-type(13) {background-image: url(../images/piece13.jpg);}
+.piece:nth-of-type(14) {background-image: url(../images/piece14.jpg);}
+@media (max-width: 767px) {
+	.piece:nth-of-type(odd), .piece:nth-of-type(even) {
+		background-image: none;
+		padding: 50px 0;
+		min-height: 0;
+	}
+}
+
+/* exp model */
+#expModel {
+	background-image: url(../images/backgroundInterview.png);
+}
+
+/* value */
+#value {
+	background-image: url(../images/backgroundCharacter.png);
+}
+
+/* wrap up*/
+#wrapup .row > img,
+#wrapup .row > div:nth-of-type(n+1) {
+	margin-bottom: 70px; 
+}
+#wrapup p strong {
+	font-size: 200%;
+	color: #00ACD3;
+}
+
+/* reference */
+#reference {
+	background: #EEE;
+	padding: 20px 0;
+	border-top: dotted 3px #CCC;
+	text-align: right;
+}
